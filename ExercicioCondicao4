@@ -1,0 +1,26 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		/*Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, sabendo que o mesmo pode
+começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.*/
+		
+		int hrInicial, hrFinal, duracao;
+		
+		Console.WriteLine("Informe a hora inicial e final do jogo: ");
+		string [] vet = Console.ReadLine().Split(' ');
+		hrInicial = int.Parse(vet[0]);
+		hrFinal = int.Parse(vet[1]);
+		
+		
+		if(hrInicial < hrFinal){
+			duracao = hrFinal - hrInicial;
+		}else{
+			duracao = 24 - hrInicial + hrFinal;
+		}
+		
+		Console.WriteLine("O jodo durou: " + duracao + " HORAS");
+	}
+}
